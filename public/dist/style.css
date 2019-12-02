@@ -1,0 +1,18 @@
+#productDescriptionContainerS {
+  display: flex;
+  flex-direction: column;
+}
+
+#titleOfProductS {
+  width: 100%;
+}
+
+#starsRatingsQuestionsContainerS {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
+#productPriceS {
+  color: #b12704;
+}
