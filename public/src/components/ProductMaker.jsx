@@ -1,13 +1,13 @@
 import React from "react";
 
-class ProductMaker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return <div>ProductMaker renders // </div>;
-  }
-}
+const ProductMaker = props => {
+  return (
+    <div>
+      <a className="productMakerS" onClick={props.goToProductMaker}>
+        {props.currentProduct.productMaker}
+      </a>
+    </div>
+  );
+};
 
 export default ProductMaker;

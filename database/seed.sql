@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS products(
   productName TEXT,
   productMaker TEXT,
   productDesc TEXT,
-  productPrice DECIMAL,
-  productRating DECIMAL,
+  productPrice DECIMAL(10,2),
+  productRating DECIMAL(2,1),
   productNumOfRatings INT,
   productNumOfQuestionsAnswered INT
 );
@@ -35,7 +35,6 @@ products(productName, productMaker, productDesc, productPrice, productRating, pr
 VALUES("Bottle caps (144 pcs)", 'RiteBrew', "Help with long term storage of bottles++Oxygen absorbing abilities in the cap begins when the cap gets wet++Has an oxygen absorbing layer within the cap for safe storage of bottles", 
 7.08, 4.2, 105, 5);
 
-
 INSERT INTO 
 products(productName, productMaker, productDesc, productPrice, productRating, productNumOfRatings, productNumOfQuestionsAnswered) 
 VALUES('First Aid Kit', 'First Aid Only', "Contains 299 essential first aid supplies for treating minor aches and injuries++Clear plastic liner in nylon case for organization and easy access to first aid supplies in an emergency++Soft sided, zippered case ideal for home, travel and on the go use++Not made with natural rubber latex", 
@@ -48,10 +47,7 @@ VALUES("Campbell's Chicken Noodle Soup (Pack of 8)", "Campbell's", "Our classic 
 
 INSERT INTO 
 products(productName, productMaker, productDesc, productPrice, productRating, productNumOfRatings, productNumOfQuestionsAnswered) 
-VALUES('Wet Cat Food Variety Pack', 'Purina Friskies', "2 Packs of twelve 5.5-ounce cans(total of 132-ounces)++
- Finely ground to a smooth texture++
- Contains artificial, natural flavors and salt++
- 100% complete & Balanced for growth of kittens and maintenance of adult cats", 
+VALUES('Wet Cat Food Variety Pack', 'Purina Friskies', "2 Packs of twelve 5.5-ounce cans(total of 132-ounces)++Finely ground to a smooth texture++Contains artificial, natural flavors and salt++100% complete & Balanced for growth of kittens and maintenance of adult cats", 
  12.84, 4.3, 1943, 46);
 
 INSERT INTO 

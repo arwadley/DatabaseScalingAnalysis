@@ -5,8 +5,13 @@ class Ratings extends React.Component {
     super(props);
     this.state = {};
   }
+
   render() {
-    return <div>_ Ratings renders // </div>;
+    return (
+      <div className="numberOfRatingsS">
+        {this.props.currentProduct.productNumOfRatings.toLocaleString()} ratings
+      </div>
+    );
   }
 }
 

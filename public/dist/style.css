@@ -1,3 +1,13 @@
+body {
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+.starDropDownContainerS {
+  z-index: auto;
+}
 #productDescriptionContainerS {
   display: flex;
   flex-direction: column;
@@ -5,6 +15,16 @@
 
 #titleOfProductS {
   width: 100%;
+}
+
+.productMakerS {
+  color: #0066c0;
+  cursor: pointer;
+}
+
+.numberOfRatingsS {
+  color: #0066c0;
+  cursor: pointer;
 }
 
 #starsRatingsQuestionsContainerS {
@@ -15,4 +35,9 @@
 
 #productPriceS {
   color: #b12704;
+  font-size: 1.25em;
+}
+
+.productDescriptionLineS {
+  color: green;
 }
