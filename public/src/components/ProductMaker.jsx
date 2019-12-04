@@ -3,9 +3,12 @@ import React from "react";
 const ProductMaker = props => {
   return (
     <div>
-      <a className="productMakerS" onClick={props.goToProductMaker}>
-        {props.currentProduct.productMaker}
-      </a>
+      <span id="theWordByS">
+        by{" "}
+        <a id="productMakerS" onClick={props.goToProductMaker}>
+          {props.currentProduct.productMaker}
+        </a>
+      </span>
     </div>
   );
 };

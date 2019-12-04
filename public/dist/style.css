@@ -3,41 +3,75 @@ body {
 }
 
 a {
+  color: #0066c0;
   cursor: pointer;
 }
+
+a:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
+
 .starDropDownContainerS {
   z-index: auto;
 }
+
 #productDescriptionContainerS {
   display: flex;
   flex-direction: column;
 }
 
-#titleOfProductS {
-  width: 100%;
+#titleOfProductContainerS {
+  height: auto;
+  font-size: 1.3em;
 }
 
-.productMakerS {
-  color: #0066c0;
+#titleOfProductS {
+  vertical-align: middle;
+}
+
+#theWordByS {
+  font-size: smaller;
+}
+
+#productMakerS {
   cursor: pointer;
 }
 
 .numberOfRatingsS {
-  color: #0066c0;
+  /* color: #0066c0; */
   cursor: pointer;
 }
 
 #starsRatingsQuestionsContainerS {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   padding-bottom: 30px;
+  width: 300px;
+}
+#productPriceContainerS {
+  height: 50px;
+}
+
+#theWordPriceS {
+  vertical-align: top;
+  font-size: smaller;
+  color: #555;
 }
 
 #productPriceS {
+  vertical-align: top;
+  font-size: 1.1em;
   color: #b12704;
-  font-size: 1.25em;
 }
 
+#productDescriptionLineContainerS {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  justify-content: left;
+}
 .productDescriptionLineS {
-  color: green;
+  color: black;
 }

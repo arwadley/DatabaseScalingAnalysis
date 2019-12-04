@@ -7,17 +7,25 @@ const db = require("../database/index.js");
 app.use(express.static(path.join(__dirname, "../public/dist")));
 app.use(express.json());
 
-app.get("/5", (req, res) => {
-  db.getProduct(5, (err, results) => {
-    console.log(results);
+app.get("/allProducts", (req, res) => {
+  db.getAllProducts((err, results) => {
     if (err) {
       console.log(err);
     } else {
       res.send(results);
     }
   });
-  // console.log(req.body);
-  // db.getProduct();
+});
+
+app.get(`/:id`, (req, res) => {
+  let id = req.params.id;
+  db.getProduct(id, (err, results) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(results);
+    }
+  });
 });
 
 app.listen(port, console.log(`Listening on port ${port}...`));

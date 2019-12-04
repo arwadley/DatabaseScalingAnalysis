@@ -3,7 +3,7 @@ import StarsDropdown from "./StarsDropdown.jsx";
 
 const Stars = props => {
   return (
-    <div>
+    <div id="starsContainerS">
       <div onMouseEnter={props.hoverDropDown} onMouseLeave={props.hoverGoBack}>
         {props.currentProduct.productRating}/5
       </div>
