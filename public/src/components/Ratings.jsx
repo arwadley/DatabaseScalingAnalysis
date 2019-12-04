@@ -8,7 +8,7 @@ class Ratings extends React.Component {
 
   render() {
     return (
-      <div className="numberOfRatingsS">
+      <div id="numberOfRatingsS">
         <a>
           {this.props.currentProduct.productNumOfRatings.toLocaleString()}{" "}
           ratings

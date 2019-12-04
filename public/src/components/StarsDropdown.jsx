@@ -3,7 +3,7 @@ import React from "react";
 const StarsDropDown = props => (
   <div>
     {props.dropDownDisplayed ? (
-      <div className="starDropDownContainerS">
+      <div id="starDropDownContainerS">
         {props.productRating}/5 --> this is the star box!
       </div>
     ) : null}

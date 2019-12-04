@@ -3,18 +3,17 @@ import ProductMaker from "./ProductMaker.jsx";
 import Stars from "./Stars.jsx";
 import Ratings from "./Ratings.jsx";
 import QuestionsAnswered from "./QuestionsAnswered.jsx";
+import InStock from "./InStock.jsx";
 const axios = require("axios");
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropDownDisplayed: false
+      currentProduct: null
     };
     this.goToProductMaker = this.goToProductMaker.bind(this);
     this.descriptionCleaner = this.descriptionCleaner.bind(this);
-    this.hoverDropDown = this.hoverDropDown.bind(this);
-    this.hoverGoBack = this.hoverGoBack.bind(this);
     this.selectProduct = this.selectProduct.bind(this);
     // this.getAllProducts = this.getAllProducts.bind(this);
   }
@@ -38,18 +37,6 @@ class App extends React.Component {
     return cleanLines;
   }
 
-  hoverDropDown() {
-    this.setState({
-      dropDownDisplayed: true
-    });
-  }
-
-  hoverGoBack() {
-    this.setState({
-      dropDownDisplayed: false
-    });
-  }
-
   selectProduct(event) {
     axios({
       method: "GET",
@@ -60,9 +47,11 @@ class App extends React.Component {
       })
     );
   }
+
   // componentDidMount() {
-  //   this.getAllProducts();
+  //   this.inStockOrNot();
   // }
+
   // getAllProducts() {
   //   console.log("get all ran");
   //   axios({
@@ -98,12 +87,7 @@ class App extends React.Component {
           />
         </div>
         <span id="starsRatingsQuestionsContainerS">
-          <Stars
-            hoverDropDown={this.hoverDropDown}
-            hoverGoBack={this.hoverGoBack}
-            currentProduct={this.state.currentProduct}
-            dropDownDisplayed={this.state.dropDownDisplayed}
-          />
+          <Stars currentProduct={this.state.currentProduct} />
           <Ratings currentProduct={this.state.currentProduct} />
           <QuestionsAnswered currentProduct={this.state.currentProduct} />
         </span>
@@ -113,6 +97,8 @@ class App extends React.Component {
             ${this.state.currentProduct.productPrice}
           </span>
         </span>
+        <div id="grayLineDividerS"></div>
+        <InStock />
         <div id="productDescriptionLineContainerS">
           <ul>
             {this.descriptionCleaner(this.state.currentProduct.productDesc).map(

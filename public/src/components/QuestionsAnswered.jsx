@@ -6,7 +6,19 @@ class QuestionsAnswered extends React.Component {
     this.state = {};
   }
   render() {
-    return <div>_ QA renders</div>;
+    return (
+      <div>
+        <span>
+          <span id="theLineS">
+            <span>|</span>
+          </span>
+          <a>
+            {this.props.currentProduct.productNumOfQuestionsAnswered} answered
+            questions
+          </a>
+        </span>
+      </div>
+    );
   }
 }
 
