@@ -4,15 +4,13 @@ class InStock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inStock: ""
+      inStock: null
     };
   }
 
   componentDidMount() {
     let stock = [true, true, true, true, true, true, false];
-
     let picker = stock[~~(Math.random() * stock.length)];
-    console.log(picker);
     this.setState({
       inStock: picker
     });

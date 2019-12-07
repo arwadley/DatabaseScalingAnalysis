@@ -8,15 +8,12 @@ class QuestionsAnswered extends React.Component {
   render() {
     return (
       <div>
-        <span>
-          <span id="theLineS">
-            <span>|</span>
-          </span>
+        <div id="numOfQuestionsAnsweredS">
           <a>
             {this.props.currentProduct.productNumOfQuestionsAnswered} answered
             questions
           </a>
-        </span>
+        </div>
       </div>
     );
   }

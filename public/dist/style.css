@@ -34,20 +34,31 @@ a:hover {
   cursor: pointer;
 }
 
+#starsContainerS {
+  cursor: pointer;
+  font-size: small;
+}
+
 #numberOfRatingsS {
   cursor: pointer;
+  font-size: small;
+}
+#theLineS {
+  font-size: small;
+  color: gray;
+}
+
+#numOfQuestionsAnsweredS {
+  cursor: pointer;
+  font-size: small;
 }
 
 #starsRatingsQuestionsContainerS {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-bottom: 30px;
-  width: 400px;
-}
-
-#theLineS {
-  margin: 25px;
+  /* padding-bottom: 30px; */
+  width: 300px;
 }
 
 #productPriceContainerS {
@@ -65,7 +76,71 @@ a:hover {
   font-size: 1.1em;
   color: #b12704;
 }
+
+#flagAndDealsContainerS {
+  display: flex;
+  justify-content: left;
+}
+
+#textFlagDealContainerS {
+  width: 70%;
+  margin-left: 0%;
+  justify-content: space-evenly;
+}
+
+#dealContainerS {
+  display: inline;
+  padding-left: 10px;
+  font-size: smaller;
+  vertical-align: bottom;
+}
+
+#flagHolderS {
+  vertical-align: bottom;
+  width: 50px;
+}
+
+#orangeFlagS {
+  border-top: 2px solid #eda93a;
+  border-bottom: 2px solid #eda93a;
+  border-left: 4px solid #eda93a;
+  border-right: 4px solid #eda93a;
+  border-radius: 3px;
+  font-size: small;
+  color: white;
+  background-color: #eda93a;
+}
+
+#theWordChoiceS {
+  color: #eda93a;
+}
+
+#blackFlagS {
+  background-color: #232f3e;
+  color: white;
+  font-size: small;
+  border-bottom: 1px solid #232f3e;
+  border-top: 3px solid #232f3e;
+  border-left: 7px solid #232f3e;
+  border-right: 7px solid #232f3e;
+}
+
+#theTriangleS {
+  font-size: 0%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #232f3e;
+  border-right: 10px solid transparent;
+  vertical-align: bottom;
+}
+
+#textAfterBlackFlagS {
+  color: #888;
+  font-size: smaller;
+}
+
 #grayLineDividerS {
+  padding-top: 3px;
   border-bottom: dotted 0.5px rgb(218, 218, 218);
 }
 
@@ -76,9 +151,20 @@ a:hover {
   justify-content: left;
 }
 
+#productDescriptionLineContainerS ul,
+#productDescriptionLineContainerS li {
+  padding-inline-start: 20px;
+}
+
 #starDropDownContainerS {
   position: absolute;
   z-index: 100;
+  margin-left: -160px;
+  background-color: rgb(252, 252, 252);
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 300px;
+  width: 400px;
 }
 
 #itemInStockS {
@@ -94,4 +180,218 @@ a:hover {
 .productDescriptionLineS {
   color: black;
   font-size: smaller;
+  padding-bottom: 4px;
+}
+
+#reportButtonContainerS {
+  display: flex;
+  width: 100%;
+  font-size: smaller;
+}
+
+#talkBubbleS {
+  float: left;
+  width: 10px;
+  height: 10px;
+  border: 1px solid blue;
+  border-radius: 2px;
+  margin-top: 2.5px;
+}
+
+#reportModalComponentS {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#reportModalContainerS {
+  position: absolute;
+  margin-top: -150px;
+  z-index: 10000;
+  width: 300px;
+  height: 350px;
+  border: 50px solid rgb(0, 0, 0, 0.3);
+}
+
+#innerReportModalContainerS {
+  margin-top: -1px;
+  display: flex;
+  position: relative;
+  z-index: 1999;
+  border: 1px solid rgba(226, 226, 226, 0.5);
+  border-radius: 2px;
+  width: 101%;
+  height: 100%;
+  background-color: white;
+  font-size: smaller;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.6);
+}
+
+#topBarOfReportModalS {
+  font-weight: 900;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(213, 213, 213);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 213, 213, 0.9360119047619048) 0%,
+    rgba(255, 255, 255, 0.6054796918767507) 79%
+  );
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid gray;
+  position: absolute;
+}
+
+#reportIssueS {
+  padding-left: 5%;
+  margin-top: 2.5%;
+  font-weight: 900;
+}
+
+#reportBoxXS {
+  padding-right: 5%;
+  margin-top: 2.7%;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#centerReportModalS {
+  padding-left: 5%;
+  position: relative;
+  margin-top: 20%;
+}
+
+#tellUsIssueReportS {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+#dropDownReportModalS {
+  justify-content: space-between;
+  display: flex;
+  border: 1px solid gray;
+  margin-top: 5px;
+  width: 270px;
+  height: 30px;
+  border-radius: 3px;
+  background: linear-gradient(
+    0deg,
+    rgba(213, 213, 213, 0.9360119047619048) 0%,
+    rgba(255, 255, 255, 0.6054796918767507) 79%
+  );
+}
+
+#whichPartReportS {
+  margin-top: 7.5px;
+  padding-left: 3%;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+.downArrowS {
+  height: 0.1px;
+  border: solid rgb(95, 95, 95);
+  border-width: 0 3px 3px 0;
+  margin-bottom: 11px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#dropDownIssueReportModalS {
+  justify-content: space-between;
+  display: flex;
+  border: 1px solid gray;
+  margin-top: 5px;
+  width: 270px;
+  height: 30px;
+  border-radius: 3px;
+  background: linear-gradient(
+    0deg,
+    rgba(213, 213, 213, 0.9360119047619048) 0%,
+    rgba(255, 255, 255, 0.6054796918767507) 79%
+  );
+}
+
+#issueReportS {
+  margin-top: 7.5px;
+  padding-left: 3%;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+#commentsReportModalS {
+  padding-top: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+#reportCommentFieldS {
+  width: 265px;
+  height: 60px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  box-shadow: inset 0.5px 0.5px rgba(68, 68, 68, 0.6);
+}
+
+#thatIFromReportS {
+  padding-top: 8px;
+  margin-left: 5px;
+  float: left;
+  font-size: medium;
+  font-weight: 900;
+  color: rgb(14, 181, 247);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#reportDisclaimerS {
+  width: 250px;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+#submitReportButtonS {
+  float: right;
+  margin-top: 10%;
+  border: 1px solid #846a29;
+  border-radius: 3px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1.2em;
+  height: 30px;
+  width: 65px;
+  background: linear-gradient(
+    0deg,
+    rgba(233, 187, 36, 0.936) 0%,
+    rgba(255, 228, 138, 0.936) 79%
+  );
+}
+
+#dealDropdownOuterContainerS {
+  z-index: 1000;
+  position: absolute;
+}
+
+#outerDealDropdownBoxS {
+  margin-top: 10px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  height: 200px;
+  width: 600px;
+  background-color: white;
 }
