@@ -8,9 +8,7 @@ class App extends React.Component {
     this.state = {
       currentProduct: null
     };
-
     this.selectProduct = this.selectProduct.bind(this);
-    // this.reportModal = this.reportModal.bind(this);
   }
 
   selectProduct(event) {
@@ -24,16 +22,9 @@ class App extends React.Component {
     );
   }
 
-  // reportModal() {
-  //   console.log("modal ran");
-  //   this.setState({
-  //     reportModalOpen: !this.state.reportModalOpen
-  //   });
-  // }
-
   render() {
     return !this.state.currentProduct ? (
-      <button onClick={this.selectProduct} value="1">
+      <button onClick={this.selectProduct} value="100">
         Click for products
       </button>
     ) : (

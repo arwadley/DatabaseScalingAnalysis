@@ -57,12 +57,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  /* padding-bottom: 30px; */
   width: 300px;
 }
 
 #productPriceContainerS {
-  height: 50px;
+  height: 20px;
 }
 
 #theWordPriceS {
@@ -75,6 +74,12 @@ a:hover {
   vertical-align: top;
   font-size: 1.1em;
   color: #b12704;
+}
+
+#shippingInfoUnderPriceS {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: smaller;
 }
 
 #flagAndDealsContainerS {
@@ -157,14 +162,21 @@ a:hover {
 }
 
 #starDropDownContainerS {
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+  margin-top: 7px;
   position: absolute;
   z-index: 100;
   margin-left: -160px;
   background-color: rgb(252, 252, 252);
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid rgb(207, 207, 207);
   height: 300px;
   width: 400px;
+  box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.6);
 }
 
 #itemInStockS {
@@ -217,20 +229,20 @@ a:hover {
 
 #reportModalContainerS {
   position: absolute;
-  margin-top: -150px;
-  z-index: 10000;
+  margin-top: -565px;
+  /* margin-left: -565px; */
+  z-index: 5000;
   width: 300px;
   height: 350px;
-  border: 50px solid rgb(0, 0, 0, 0.3);
+  border: 100vh solid rgb(0, 0, 0, 0.3);
 }
 
 #innerReportModalContainerS {
-  margin-top: -1px;
   display: flex;
   position: relative;
   z-index: 1999;
   border: 1px solid rgba(226, 226, 226, 0.5);
-  border-radius: 2px;
+  border-radius: 4px;
   width: 101%;
   height: 100%;
   background-color: white;
@@ -251,7 +263,7 @@ a:hover {
   );
   width: 100%;
   height: 10%;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(182, 182, 182);
   position: absolute;
 }
 
@@ -280,6 +292,7 @@ a:hover {
 }
 
 #dropDownReportModalS {
+  cursor: pointer;
   justify-content: space-between;
   display: flex;
   border: 1px solid gray;
@@ -292,6 +305,41 @@ a:hover {
     rgba(213, 213, 213, 0.9360119047619048) 0%,
     rgba(255, 255, 255, 0.6054796918767507) 79%
   );
+}
+
+#dropDownReportModalS:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(199, 199, 199, 0.936) 0%,
+    rgba(207, 207, 207, 0.605) 79%
+  );
+}
+
+#dropDownReportModalS:hover #dropDownReportModalContentS {
+  display: block;
+}
+
+#dropDownReportModalContentS {
+  display: none;
+  z-index: 5001;
+  position: absolute;
+  margin-top: 30px;
+  background-color: white;
+  border: 2px solid rgb(184, 181, 181);
+  width: 100%;
+  height: 135px;
+  border-radius: 4px;
+}
+
+.dropDownItemS {
+  font-size: small;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.dropDownItemS:hover {
+  border: 1px solid rgb(143, 143, 143);
+  background-color: rgb(204, 204, 204);
 }
 
 #whichPartReportS {
@@ -315,6 +363,8 @@ a:hover {
 }
 
 #dropDownIssueReportModalS {
+  position: relative;
+  cursor: pointer;
   justify-content: space-between;
   display: flex;
   border: 1px solid gray;
@@ -327,6 +377,31 @@ a:hover {
     rgba(213, 213, 213, 0.9360119047619048) 0%,
     rgba(255, 255, 255, 0.6054796918767507) 79%
   );
+}
+
+#dropDownIssueReportModalS:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(199, 199, 199, 0.936) 0%,
+    rgba(207, 207, 207, 0.605) 79%
+  );
+}
+
+#dropDownIssueReportModalContentS {
+  display: none;
+  z-index: 5001;
+  position: absolute;
+  margin-top: 30px;
+  background-color: white;
+  border: 2px solid rgb(184, 181, 181);
+  width: 100%;
+  height: 85px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#dropDownIssueReportModalS:hover #dropDownIssueReportModalContentS {
+  display: block;
 }
 
 #issueReportS {
@@ -375,6 +450,7 @@ a:hover {
   font-size: 1.2em;
   height: 30px;
   width: 65px;
+  cursor: pointer;
   background: linear-gradient(
     0deg,
     rgba(233, 187, 36, 0.936) 0%,
@@ -388,10 +464,119 @@ a:hover {
 }
 
 #outerDealDropdownBoxS {
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
   margin-top: 10px;
-  border: 2px solid gray;
+  border: 2px solid rgb(207, 207, 207);
   border-radius: 4px;
-  height: 200px;
+  height: 150px;
   width: 600px;
   background-color: white;
+  box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.6);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#buy5Save5S {
+  font-weight: 900;
+  margin-bottom: -12px;
+}
+
+#dealTextContainerS {
+  padding-left: 40px;
+  width: 75%;
+}
+
+#outerLearnMoreModalContainerS {
+  margin-top: -850px;
+  margin-left: -500px;
+  position: absolute;
+  z-index: 2001;
+  width: 400px;
+  height: 600px;
+  border-radius: 4px;
+  border: 100vh solid rgb(0, 0, 0, 0.3);
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#innerLearnMoreModalContainerS {
+  margin-top: -1px;
+  margin-left: -1px;
+  border: 2px solid rgba(226, 226, 226, 0.5);
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+#topBarLearnMoreS {
+  font-weight: 900;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(213, 213, 213);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 213, 213) 0%,
+    rgba(255, 255, 255) 79%
+  );
+  width: 100%;
+  height: 6%;
+  border-bottom: 1px solid gray;
+  position: absolute;
+}
+
+#innerLearnMoreS {
+  margin-top: 40px;
+  padding-left: 5%;
+  margin-right: 10px;
+}
+
+#innerLearnMoreS ul,
+#innerLearnMoreS li {
+  padding-inline-start: 15px;
+  padding-bottom: 6px;
+}
+
+#learnMoreHowS {
+  padding-left: 5%;
+  margin-top: 2.5%;
+  font-weight: 900;
+}
+
+#learnMoreXS {
+  padding-right: 5%;
+  margin-top: 2.3%;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#promoDetailsLearnMoreS {
+  padding-bottom: 20px;
+  font-weight: 500;
 }

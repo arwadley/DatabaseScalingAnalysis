@@ -22,14 +22,4 @@ const getProduct = (productID, callback) => {
   );
 };
 
-const getAllProducts = callback => {
-  productDB.query(`SELECT * FROM products;`, (err, results) => {
-    if (err) {
-      console.log(err);
-    } else {
-      callback(err, results);
-    }
-  });
-};
-
-module.exports = { getProduct, getAllProducts };
+module.exports = { getProduct };

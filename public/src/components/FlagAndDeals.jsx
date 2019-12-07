@@ -1,16 +1,21 @@
 import React from "react";
 import DealDropdown from "./DealDropdown.jsx";
+import LearnMoreModal from "./LearnMoreModal.jsx";
 
 class FlagAndDeals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       flagToShow: null,
-      showDeals: false
+      showDeals: false,
+      learnMoreModalOpen: false
     };
     this.dealGetter = this.dealGetter.bind(this);
     this.dealPopDown = this.dealPopDown.bind(this);
     this.dealGoBack = this.dealGoBack.bind(this);
+    this.dealGoBackQuicker = this.dealGoBackQuicker.bind(this);
+    this.openLearnMoreModal = this.openLearnMoreModal.bind(this);
+    this.closeLearnMoreModal = this.closeLearnMoreModal.bind(this);
   }
 
   dealGetter() {
@@ -28,8 +33,31 @@ class FlagAndDeals extends React.Component {
   }
 
   dealGoBack() {
+    setTimeout(
+      () =>
+        this.setState({
+          showDeals: false
+        }),
+      800
+    );
+  }
+
+  dealGoBackQuicker() {
     this.setState({
       showDeals: false
+    });
+  }
+
+  openLearnMoreModal() {
+    this.dealGoBackQuicker();
+    this.setState({
+      learnMoreModalOpen: true
+    });
+  }
+
+  closeLearnMoreModal() {
+    this.setState({
+      learnMoreModalOpen: false
     });
   }
 
@@ -47,16 +75,26 @@ class FlagAndDeals extends React.Component {
                 <span id="orangeFlagS">Extra Savings</span>
                 <span id="dealContainerS">
                   <span id="dealsDropdownS">
-                    <a
-                      onMouseEnter={this.dealPopDown}
-                      onMouseLeave={this.dealGoBack}
-                    >
+                    <a onMouseEnter={this.dealPopDown}>
                       Buy 5, save 5%. 1 Applicable Promotion(s)
                     </a>
                   </span>
                   {this.state.showDeals ? (
-                    <div id="dealDropdownOuterContainerS">
-                      <DealDropdown />
+                    <div
+                      id="dealDropdownOuterContainerS"
+                      onMouseLeave={this.dealGoBack}
+                    >
+                      <DealDropdown
+                        currentProduct={this.props.currentProduct}
+                        openLearnMoreModal={this.openLearnMoreModal}
+                      />
+                    </div>
+                  ) : null}
+                  {this.state.learnMoreModalOpen ? (
+                    <div id="outerLearnMoreModalContainerS">
+                      <LearnMoreModal
+                        closeLearnMoreModal={this.closeLearnMoreModal}
+                      />
                     </div>
                   ) : null}
                 </span>
@@ -68,7 +106,7 @@ class FlagAndDeals extends React.Component {
                 </span>
                 <span id="theTriangleS"></span>{" "}
                 <span id="textAfterBlackFlagS">
-                  in <a>[category]</a>
+                  in <a>{this.props.currentProduct.productCategory}</a>
                 </span>
               </span>
             )}

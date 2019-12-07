@@ -18,15 +18,19 @@ class Stars extends React.Component {
   }
 
   hoverGoBack() {
-    this.setState({
-      dropDownDisplayed: false
-    });
+    setTimeout(
+      () =>
+        this.setState({
+          dropDownDisplayed: false
+        }),
+      800
+    );
   }
 
   render() {
     return (
       <div id="starsContainerS">
-        <div onMouseEnter={this.hoverDropDown} onMouseLeave={this.hoverGoBack}>
+        <div onMouseEnter={this.hoverDropDown}>
           {this.props.currentProduct.productRating}/5
         </div>
         <div>
