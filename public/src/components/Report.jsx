@@ -63,6 +63,10 @@ class Report extends React.Component {
               changeBottomSelection={this.changeBottomSelection}
               bottomSelection={this.state.bottomSelection}
             />
+            <div
+              id="underReportBackgroundS"
+              onClick={this.closeReportModal}
+            ></div>
           </div>
         ) : null}
       </span>
