@@ -9,9 +9,9 @@ const OrderByDates = props => {
           <div>
             Order within the next{" "}
             <span id="countdownTimerS">
-              {props.orderByDateHours} {props.orderByDateMinutes}
+              {props.orderByDateHours} {props.orderByDateMinutes}{" "}
+              {props.orderByDateSeconds}
             </span>
-            .
           </div>
         </div>
       ) : (

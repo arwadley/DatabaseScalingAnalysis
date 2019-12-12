@@ -40,14 +40,13 @@ class Report extends React.Component {
   }
 
   submitReport() {
-    alert("Cool story BRO");
+    alert("Thank you for your submission.");
     this.closeReportModal();
   }
 
   render() {
     return (
       <span>
-        <div id="talkBubbleS"></div>
         <span id="reportInfoS">
           <a onClick={this.openReportModal}>
             Report incorrect product information.

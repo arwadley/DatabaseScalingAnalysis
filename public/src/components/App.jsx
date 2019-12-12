@@ -11,6 +11,24 @@ class App extends React.Component {
     this.selectProduct = this.selectProduct.bind(this);
   }
 
+  // ! This is the proxy route
+  // selectProduct(event) {
+  //   axios
+  //     .get(
+  //       `http://node-express-env.pd2fd7phmh.us-east-2.elasticbeanstalk.com/api/${event.target.value}`,
+  //       {
+  //         headers: {
+  //           "Access-Control-Allow-Origin": "*"
+  //         }
+  //       }
+  //     )
+  //     .then(data =>
+  //       this.setState({
+  //         currentProduct: data.data[0]
+  //       })
+  //     );
+  // }
+
   selectProduct(event) {
     axios({
       method: "GET",
@@ -24,7 +42,7 @@ class App extends React.Component {
 
   render() {
     return !this.state.currentProduct ? (
-      <button onClick={this.selectProduct} value="60">
+      <button onClick={this.selectProduct} value="68">
         Click for products
       </button>
     ) : (
