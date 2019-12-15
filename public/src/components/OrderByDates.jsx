@@ -1,4 +1,7 @@
 import React from "react";
+import Hours from "./Hours.jsx";
+import Minutes from "./Minutes.jsx";
+import Seconds from "./Seconds.jsx";
 
 const OrderByDates = props => {
   return (
@@ -9,8 +12,7 @@ const OrderByDates = props => {
           <div>
             Order within the next{" "}
             <span id="countdownTimerS">
-              {props.orderByDateHours} {props.orderByDateMinutes}{" "}
-              {props.orderByDateSeconds}
+              <Hours /> <Minutes /> <Seconds />
             </span>
           </div>
         </div>

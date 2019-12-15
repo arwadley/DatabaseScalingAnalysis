@@ -148,6 +148,11 @@ a:hover {
   padding-top: 3px;
   border-bottom: dotted 0.5px rgb(218, 218, 218);
 }
+#grayLineDivider2S {
+  width: 92%;
+  margin-top: 17px;
+  border-bottom: solid 0.5px rgb(218, 218, 218);
+}
 
 #shipsFromS {
   padding-top: 5px;
@@ -181,6 +186,7 @@ a:hover {
 
 #productDescriptionLineContainerS ul,
 #productDescriptionLineContainerS li {
+  list-style: initial;
   padding-inline-start: 20px;
 }
 
@@ -193,20 +199,20 @@ a:hover {
   margin-top: 7px;
   position: absolute;
   z-index: 100;
-  /* margin-left: -160px; */
   background-color: rgb(252, 252, 252);
   border-radius: 5px;
   border: 1px solid rgb(207, 207, 207);
   height: 300px;
   width: 400px;
   box-shadow: 0px 0px 3px rgb(0, 0, 0, 0.6);
+  padding-left: 20px;
 }
 #innerStarDropdownContainerS {
   margin-top: 20px;
-  margin-left: 20px;
 }
+
 #starsInsideDropdownS {
-  float: left;
+  display: inline-block;
 }
 
 #ratingInsideDropdownS {
@@ -247,6 +253,9 @@ a:hover {
 }
 
 #reportModalComponentS {
+  top: -190px;
+  left: 0;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   opacity: 1;
@@ -268,11 +277,28 @@ a:hover {
 #underReportBackgroundS {
   position: relative;
   z-index: 1;
-  margin-top: -70vh;
-  width: 95vw;
-  height: 130vh;
+  width: 150vw;
+  height: 230vh;
   background-color: rgb(0, 0, 0, 0.3);
 }
+
+#underLearnMoreBackgroundS {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+/* .testBackGroundS {
+  margin-top: -70vh;
+  position: absolute;
+  z-index: 1;
+  width: 150vw;
+  height: 130vh;
+  background-color: rgb(0, 0, 0, 0.3);
+} */
 
 #reportModalContainerS {
   position: absolute;
@@ -373,14 +399,13 @@ a:hover {
   background-color: white;
   border: 2px solid rgb(184, 181, 181);
   width: 270px;
-  height: 135px;
+  height: auto;
   border-radius: 4px;
 }
 
 .dropDownItemS {
   font-size: small;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
   display: block;
 }
@@ -545,14 +570,11 @@ a:hover {
 }
 
 #outerLearnMoreModalContainerS {
-  margin-top: -850px;
-  margin-left: -500px;
-  position: absolute;
-  z-index: 2001;
+  position: fixed;
+  left: -131px;
+  top: 144px;
   width: 400px;
   height: 600px;
-  border-radius: 4px;
-  border: 100vh solid rgb(0, 0, 0, 0.3);
   opacity: 1;
   animation-name: fadeIn;
   animation-iteration-count: 1;
@@ -569,16 +591,25 @@ a:hover {
   }
 }
 
+#entireLearnMoreModalS {
+  position: absolute;
+  margin-left: 40vw;
+  z-index: 9999;
+  width: 400px;
+  height: 600px;
+}
+
 #innerLearnMoreModalContainerS {
   margin-top: -1px;
-  margin-left: -1px;
+  margin-left: 100px;
   border: 2px solid rgba(226, 226, 226, 0.5);
   border-radius: 4px;
   display: flex;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
   background-color: white;
+  position: relative;
+  z-index: 10000;
 }
 
 #topBarLearnMoreS {
@@ -601,7 +632,7 @@ a:hover {
 #innerLearnMoreS {
   margin-top: 40px;
   padding-left: 5%;
-  margin-right: 10px;
+  overflow-y: scroll;
 }
 
 #innerLearnMoreS ul,
@@ -630,4 +661,76 @@ a:hover {
 
 .MuiRating-root {
   margin-left: -3px;
+}
+
+#compareContainerS {
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+#newFromS {
+  font-size: small;
+  padding-bottom: 10px;
+}
+#newFromPriceWordS {
+  color: #b12704;
+}
+
+#ratingBarContainerS {
+  display: flex;
+  flex-direction: column;
+}
+
+.outerRatingBarContainerS {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-left: -30px;
+}
+
+.testRatingBarContainerS {
+  float: left;
+  margin-top: 5px;
+  margin-left: -30px;
+  background-image: linear-gradient(to bottom, #eee, #f6f6f6);
+  width: 225px;
+  height: 15px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.testRatingBarsS {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #ffce00, #ffa700);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  transition: width 0.5s;
+}
+
+.numericalRatingS {
+  padding-top: 3px;
+  font-size: small;
+}
+
+.percentageRatingS {
+  padding-top: 3px;
+  font-size: small;
+  margin-left: -20px;
+}
+
+#numOfRatingsInDropdownS {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: small;
+  color: rgb(143, 143, 143);
+}
+#seeCustomerReviewsS {
+  text-align: center;
+  margin-top: 10%;
+  margin-left: -49px;
+  height: 50px;
+}
+
+#seeAllLinkS {
+  font-size: small;
 }

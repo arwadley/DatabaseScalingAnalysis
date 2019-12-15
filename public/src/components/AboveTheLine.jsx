@@ -19,13 +19,20 @@ const AboveTheLine = props => {
         />
       </div>
       <span id="starsRatingsQuestionsContainerS">
-        <Stars currentProduct={props.currentProduct} />
+        <Stars
+          individualRatings={props.individualRatings}
+          currentProduct={props.currentProduct}
+          currentProductRating={props.currentProductRating}
+        />
         <Ratings currentProduct={props.currentProduct} />
         <span id="theLineS">|</span>
         <QuestionsAnswered currentProduct={props.currentProduct} />
       </span>
       <PriceAndShipping currentProduct={props.currentProduct} />
-      <FlagAndDeals currentProduct={props.currentProduct} />
+      <FlagAndDeals
+        currentProduct={props.currentProduct}
+        flagToShow={props.flagToShow}
+      />
     </div>
   );
 };

@@ -10,6 +10,7 @@ const ReportModal = props => {
             x
           </h4>
         </div>
+
         <div id="centerReportModalS">
           <div id="tellUsIssueReportS">Please tell us about the issue.</div>
           <div id="dropDownReportModalS">

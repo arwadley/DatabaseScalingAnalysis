@@ -3,6 +3,8 @@ import InStock from "./InStock.jsx";
 import OrderByDates from "./OrderByDates.jsx";
 import DescriptionInformation from "./DescriptionInformation.jsx";
 import Report from "./Report.jsx";
+import CompareSimilar from "./CompareSimilar.jsx";
+import NewFromPrice from "./NewFromPrice.jsx";
 
 const BelowTheLine = props => {
   return (
@@ -22,6 +24,8 @@ const BelowTheLine = props => {
         currentProduct={props.currentProduct}
         descriptionCleaner={props.descriptionCleaner}
       />
+      <CompareSimilar currentProduct={props.currentProduct} />
+      <NewFromPrice currentProduct={props.currentProduct} />
       <span id="reportButtonContainerS">
         <Report
           reportModal={props.reportModal}
