@@ -24,11 +24,12 @@ class App extends React.Component {
     axios({
       method: "GET",
       url: `http://node-express-env.pd2fd7phmh.us-east-2.elasticbeanstalk.com/api/${event}`
-    }).then(data =>
+    }).then(data => {
+      console.log(data);
       this.setState({
         currentProduct: data.data[0]
-      })
-    );
+      });
+    });
   }
 
   getRatingFromInput(event) {
