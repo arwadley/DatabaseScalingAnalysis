@@ -38,7 +38,18 @@ let deleteItemById = function(currentId, callback) {
   });
 };
 
+let updateItemById = function(currentId, updateFields, callback) {
+  currentId = Number(currentId);
+  collection.updateOne({ id: currentId }, { $set: updateFields }, function(
+    error,
+    result
+  ) {
+    callback(error, result);
+  });
+};
+
 module.exports.collection = collection;
 module.exports.addItem = addItem;
 module.exports.getItemById = getItemById;
 module.exports.deleteItemById = deleteItemById;
+module.exports.updateItemById = updateItemById;

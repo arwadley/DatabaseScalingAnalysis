@@ -21,17 +21,35 @@ app.get("/item", (req, res) => {
   });
 });
 
-app.put("/item", (req, res) => {});
+app.put("/item", (req, res) => {
+  let updatedFields = req.body;
+  let id = updatedFields.id;
+  console.log(updatedFields);
+  mDB.updateItemById(id, updatedFields, function(error, result) {
+    if (error) {
+      res.status(404).send();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
 
 app.post("/item", (req, res) => {
-  let product = req.query;
+  let product = req.body;
+  mDB.addItem(product, function(error, result) {
+    if (error) {
+      console.log(error);
+      res.status(400).end();
+    } else {
+      res.status(200).send(result);
+    }
+  });
 });
 
 app.delete("/item", (req, res) => {
   let id = req.query.id;
   mDB.deleteItemById(id, function(error, result) {
     if (error) {
-      console.log(error);
       res.status(400).end();
     } else {
       res.status(200).send(result);
