@@ -1,16 +1,14 @@
 const express = require("express");
 const path = require("path");
 let app = express();
-const faker = require("faker");
 const port = 7777;
-// const dbPG = require("../database/postgresIndex.js");
-let fs = require("fs");
+const dbPG = require("../database/postgresIndex.js");
 let mDB = require("../database/mongoIndex");
 
 app.use(express.static(path.join(__dirname, "../public/dist")));
 app.use(express.json());
 
-app.get("/item", (req, res) => {
+app.get("/itemIdMongo", (req, res) => {
   let id = req.query.id;
   mDB.getItemById(id, function(error, result) {
     if (error) {
@@ -21,7 +19,9 @@ app.get("/item", (req, res) => {
   });
 });
 
-app.put("/item", (req, res) => {
+app.get("/itenNameMongo", (req, res) => {});
+
+app.put("/itemMongo", (req, res) => {
   let updatedFields = req.body;
   let id = updatedFields.id;
   console.log(updatedFields);
@@ -34,7 +34,7 @@ app.put("/item", (req, res) => {
   });
 });
 
-app.post("/item", (req, res) => {
+app.post("/itemMongo", (req, res) => {
   let product = req.body;
   mDB.addItem(product, function(error, result) {
     if (error) {
@@ -46,11 +46,57 @@ app.post("/item", (req, res) => {
   });
 });
 
-app.delete("/item", (req, res) => {
+app.delete("/itemMongo", (req, res) => {
   let id = req.query.id;
   mDB.deleteItemById(id, function(error, result) {
     if (error) {
       res.status(400).end();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+app.get("/itemIdPG", (req, res) => {
+  let id = req.query.id;
+  dbPG.getItemById(id, function(error, result) {
+    if (error) {
+      res.status(404).send();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+app.get("/itenNamePG", (req, res) => {});
+
+app.put("/itemPG", (req, res) => {
+  let updatedItem = req.body;
+  dbPG.updateItem(updatedItem, function(error, result) {
+    if (error) {
+      res.status(400).send();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+app.post("/itemPG", (req, res) => {
+  let product = req.body;
+  dbPG.insertItem(product, function(error, result) {
+    if (error) {
+      res.status(400).send(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+app.delete("/itemPG", (req, res) => {
+  let id = req.query.id;
+  dbPG.deleteItem(id, function(error, result) {
+    if (error) {
+      res.status(400).sendDate(error);
     } else {
       res.status(200).send(result);
     }
