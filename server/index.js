@@ -2,11 +2,19 @@ const express = require("express");
 const path = require("path");
 let app = express();
 const port = 7777;
+let morgan = require("morgan");
+
+let cors = require("cors");
+app.use(cors());
+
 const dbPG = require("../database/postgresIndex.js");
 let mDB = require("../database/mongoIndex");
 
 app.use(express.static(path.join(__dirname, "../public/dist")));
 app.use(express.json());
+app.use(
+  morgan(":method :url :status :res[content-length] - :response-time ms")
+);
 
 app.get("/itemIdMongo", (req, res) => {
   let id = req.query.id;
@@ -19,12 +27,11 @@ app.get("/itemIdMongo", (req, res) => {
   });
 });
 
-app.get("/itenNameMongo", (req, res) => {});
+app.get("/itemNameMongo", (req, res) => {});
 
 app.put("/itemMongo", (req, res) => {
   let updatedFields = req.body;
   let id = updatedFields.id;
-  console.log(updatedFields);
   mDB.updateItemById(id, updatedFields, function(error, result) {
     if (error) {
       res.status(404).send();
@@ -96,7 +103,7 @@ app.delete("/itemPG", (req, res) => {
   let id = req.query.id;
   dbPG.deleteItem(id, function(error, result) {
     if (error) {
-      res.status(400).sendDate(error);
+      res.status(400).send(error);
     } else {
       res.status(200).send(result);
     }

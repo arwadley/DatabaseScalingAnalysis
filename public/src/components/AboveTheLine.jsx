@@ -18,7 +18,7 @@ const AboveTheLine = props => {
           goToProductMaker={props.goToProductMaker}
         />
       </div>
-      <span id="starsRatingsQuestionsContainerS">
+      {/* <span id="starsRatingsQuestionsContainerS">
         <Stars
           individualRatings={props.individualRatings}
           currentProduct={props.currentProduct}
@@ -27,7 +27,7 @@ const AboveTheLine = props => {
         <Ratings currentProduct={props.currentProduct} />
         <span id="theLineS">|</span>
         <QuestionsAnswered currentProduct={props.currentProduct} />
-      </span>
+      </span> */}
       <PriceAndShipping currentProduct={props.currentProduct} />
       <FlagAndDeals
         currentProduct={props.currentProduct}

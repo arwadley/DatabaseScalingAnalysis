@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentProduct: null,
-      currentProductRating: null,
+      currentProductRating: 5.0,
       individualRatings: null,
       inStock: null,
       flagToShow: null
@@ -20,28 +20,25 @@ class App extends React.Component {
     this.dealGetter = this.dealGetter.bind(this);
   }
 
-  selectProductFromField(event) {
-    axios({
-      method: "GET",
-      url: `http://node-express-env.pd2fd7phmh.us-east-2.elasticbeanstalk.com/api/${event}`
-    }).then(data => {
-      console.log(data);
+  selectProductFromField(id) {
+    axios.get("/itemIdMongo", { params: { id: id } }).then(data => {
+      console.log(data.data);
       this.setState({
-        currentProduct: data.data[0]
+        currentProduct: data.data
       });
     });
   }
 
   getRatingFromInput(event) {
-    axios({
-      method: "GET",
-      url: `http://gammazonreviews.us-east-2.elasticbeanstalk.com/comments/${event}`
-    }).then(data =>
-      this.setState({
-        currentProductRating: data.data[0].average,
-        individualRatings: data.data[0].individualRatings
-      })
-    );
+    // axios({
+    //   method: "GET",
+    //   url: `http://gammazonreviews.us-east-2.elasticbeanstalk.com/comments/${event}`
+    // }).then(data =>
+    //   this.setState({
+    //     currentProductRating: data.data[0].average,
+    //     individualRatings: data.data[0].individualRatings
+    //   })
+    // );
   }
 
   availableOrNot() {
@@ -61,24 +58,25 @@ class App extends React.Component {
   }
 
   getId() {
-    let idText = window.location.search;
-    let croppedID = idText.substring(idText.indexOf("=") + 1);
-    croppedID = +croppedID;
-    this.getRatingFromInput(croppedID);
-    this.selectProductFromField(croppedID);
-    this.availableOrNot();
-    this.dealGetter();
+    // let idText = window.location.search;
+    // let croppedID = idText.substring(idText.indexOf("=") + 1);
+    // croppedID = +croppedID;
+    // this.getRatingFromInput(croppedID);
+    // this.selectProductFromField(croppedID);
+    // this.availableOrNot();
+    // this.dealGetter();
   }
 
   defaultGet() {
-    this.getRatingFromInput(1);
-    this.selectProductFromField(1);
+    // this.getRatingFromInput(1);
+    this.selectProductFromField(800);
     this.availableOrNot();
     this.dealGetter();
   }
 
   componentDidMount() {
-    window.location.search ? this.getId() : this.defaultGet();
+    // window.location.search ? this.getId() : this.defaultGet();
+    this.defaultGet();
   }
 
   render() {
