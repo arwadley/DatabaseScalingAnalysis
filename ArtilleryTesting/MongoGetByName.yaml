@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:7777"
+  phases:
+    - duration: 10
+      arrivalRate: 10
+  payload:
+    path: "/Users/alyssawadley/Documents/GitHub/product-description/ArtilleryTesting/testProductNames.csv"
+    skipHeader: true
+    fields:
+      - "productName"
+scenarios:
+  - flow:
+      - get:
+          url: "/itemNameMongo/?itemName={{ productName }}"

@@ -4,6 +4,7 @@ const path = require("path");
 let app = express();
 const port = 7777;
 let morgan = require("morgan");
+let fs = require("fs");
 
 let cors = require("cors");
 app.use(cors());
@@ -109,8 +110,10 @@ app.put("/itemPG", (req, res) => {
 
 app.post("/itemPG", (req, res) => {
   let product = req.body;
+  console.log(product);
   dbPG.insertItem(product, function(error, result) {
     if (error) {
+      console.log(error);
       res.status(400).send(error);
     } else {
       res.status(200).send(result);
@@ -130,6 +133,29 @@ app.delete("/itemPG", (req, res) => {
 });
 
 app.listen(port, console.log(`Listening on port ${port}...`));
+
+// app.get("/fs", (req, res) => {
+//   dbPG.pullitemNamesForTest(function(error, result) {
+//     if (error) {
+//       res.status(400).send();
+//     } else {
+//       let string = "productName\n";
+//       for (let i = 0; i < result.length; i++) {
+//         string += result[i].productname + "\n";
+//       }
+//       let path =
+//         "/Users/alyssawadley/Documents/GitHub/product-description/ArtilleryTesting/testProductNames.csv";
+//       fs.writeFile(path, string, function(err, data) {
+//         if (err) {
+//           console.log("oh no!");
+//           res.status(400).end();
+//         } else {
+//           res.status(200).end();
+//         }
+//       });
+//     }
+//   });
+// });
 
 // helper function used to create data and write to csv files
 // app.get("/fs", (req, res) => {

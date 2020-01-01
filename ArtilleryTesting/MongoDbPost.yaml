@@ -1,0 +1,23 @@
+config:
+  target: "http://localhost:7777"
+  phases:
+    - duration: 10
+      arrivalRate: 500
+  processor: "./testDataGen.js"
+
+scenarios:
+  - name: "Post items to Database"
+    flow:
+      - function: "generateTestData"
+      - post:
+          url: "/itemMongo"
+          json:
+            id: "{{ id}}"
+            productName: "{{ productName }}"
+            productMaker: "{{ productMaker }}"
+            productDesc: "{{productDesc}}"
+            productPrice: "{{productPrice}}"
+            productRating: "{{productRating}}"
+            productNumOfRatings: "{{productNumOfRatings}}"
+            productNumOfQuestionsAnswered: "{{productNumOfQuestionsAnswered}}"
+            productCategory: "{{productCategory}}"

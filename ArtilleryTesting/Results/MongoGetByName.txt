@@ -1,0 +1,602 @@
+***** WITH INDEXING ON NAME******* 
+ 
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:17:32(-0600) 2020-01-01
+Report @ 14:17:42(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  9
+  Scenarios completed: 9
+  Requests completed:  9
+  RPS sent: 1.01
+  Request latency:
+    min: 4
+    max: 29.2
+    median: 5.5
+    p95: 29.2
+    p99: 29.2
+  Codes:
+    200: 9
+
+Report @ 14:17:43(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  1
+  RPS sent: 2
+  Request latency:
+    min: 7.9
+    max: 7.9
+    median: 7.9
+    p95: 7.9
+    p99: 7.9
+  Codes:
+    200: 1
+
+All virtual users finished
+Summary report @ 14:17:43(-0600) 2020-01-01
+  Scenarios launched:  10
+  Scenarios completed: 10
+  Requests completed:  10
+  RPS sent: 1.06
+  Request latency:
+    min: 4
+    max: 29.2
+    median: 6
+    p95: 29.2
+    p99: 29.2
+  Scenario counts:
+    0: 10 (100%)
+  Codes:
+    200: 10
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:17:55(-0600) 2020-01-01
+Report @ 14:18:05(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  99
+  Scenarios completed: 99
+  Requests completed:  99
+  RPS sent: 10.06
+  Request latency:
+    min: 3.5
+    max: 7.3
+    median: 3.9
+    p95: 5.8
+    p99: 7.2
+  Codes:
+    200: 99
+
+Report @ 14:18:06(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  1
+  RPS sent: 2
+  Request latency:
+    min: 9.1
+    max: 9.1
+    median: 9.1
+    p95: 9.1
+    p99: 9.1
+  Codes:
+    200: 1
+
+All virtual users finished
+Summary report @ 14:18:06(-0600) 2020-01-01
+  Scenarios launched:  100
+  Scenarios completed: 100
+  Requests completed:  100
+  RPS sent: 9.65
+  Request latency:
+    min: 3.5
+    max: 9.1
+    median: 3.9
+    p95: 5.9
+    p99: 8.2
+  Scenario counts:
+    0: 100 (100%)
+  Codes:
+    200: 100
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:19:13(-0600) 2020-01-01
+Report @ 14:19:23(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  999
+  Scenarios completed: 998
+  Requests completed:  998
+  RPS sent: 100.5
+  Request latency:
+    min: 2.5
+    max: 21.6
+    median: 3
+    p95: 4.8
+    p99: 9
+  Codes:
+    200: 998
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12766)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:19:23(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  1
+  Scenarios completed: 2
+  Requests completed:  2
+  RPS sent: 2
+  Request latency:
+    min: 3.3
+    max: 25.8
+    median: 14.6
+    p95: 25.8
+    p99: 25.8
+  Codes:
+    200: 2
+
+All virtual users finished
+Summary report @ 14:19:23(-0600) 2020-01-01
+  Scenarios launched:  1000
+  Scenarios completed: 1000
+  Requests completed:  1000
+  RPS sent: 95.51
+  Request latency:
+    min: 2.5
+    max: 25.8
+    median: 3
+    p95: 4.8
+    p99: 9.9
+  Scenario counts:
+    0: 1000 (100%)
+  Codes:
+    200: 1000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:19:41(-0600) 2020-01-01
+Report @ 14:19:51(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  2498
+  Scenarios completed: 2497
+  Requests completed:  2497
+  RPS sent: 250.8
+  Request latency:
+    min: 2.5
+    max: 26.3
+    median: 3.7
+    p95: 7.8
+    p99: 16.2
+  Codes:
+    200: 2497
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12784)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:19:52(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  2
+  Scenarios completed: 3
+  Requests completed:  3
+  RPS sent: 4
+  Request latency:
+    min: 3.7
+    max: 42.7
+    median: 4.8
+    p95: 42.7
+    p99: 42.7
+  Codes:
+    200: 3
+
+All virtual users finished
+Summary report @ 14:19:52(-0600) 2020-01-01
+  Scenarios launched:  2500
+  Scenarios completed: 2500
+  Requests completed:  2500
+  RPS sent: 238.1
+  Request latency:
+    min: 2.5
+    max: 42.7
+    median: 3.7
+    p95: 7.8
+    p99: 16.3
+  Scenario counts:
+    0: 2500 (100%)
+  Codes:
+    200: 2500
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:20:05(-0600) 2020-01-01
+Report @ 14:20:15(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  4996
+  Scenarios completed: 4993
+  Requests completed:  4993
+  RPS sent: 501
+  Request latency:
+    min: 2.3
+    max: 46.8
+    median: 6.8
+    p95: 20.2
+    p99: 33.4
+  Codes:
+    200: 4993
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12800)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:20:15(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  4
+  Scenarios completed: 7
+  Requests completed:  7
+  RPS sent: 9.8
+  Request latency:
+    min: 8.9
+    max: 64.3
+    median: 16.1
+    p95: 64.3
+    p99: 64.3
+  Codes:
+    200: 7
+
+All virtual users finished
+Summary report @ 14:20:15(-0600) 2020-01-01
+  Scenarios launched:  5000
+  Scenarios completed: 5000
+  Requests completed:  5000
+  RPS sent: 474.38
+  Request latency:
+    min: 2.3
+    max: 64.3
+    median: 6.8
+    p95: 20.3
+    p99: 33.5
+  Scenario counts:
+    0: 5000 (100%)
+  Codes:
+    200: 5000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:20:26(-0600) 2020-01-01
+Report @ 14:20:36(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  5384
+  Scenarios completed: 5376
+  Requests completed:  5376
+  RPS sent: 539.28
+  Request latency:
+    min: 4.5
+    max: 52.6
+    median: 7
+    p95: 18.3
+    p99: 36.5
+  Codes:
+    200: 5376
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12816)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:20:41(-0600) 2020-01-01
+Elapsed time: 15 seconds
+  Scenarios launched:  2117
+  Scenarios completed: 2125
+  Requests completed:  2125
+  RPS sent: 489.38
+  Request latency:
+    min: 4.5
+    max: 106.1
+    median: 8.1
+    p95: 19.8
+    p99: 44.1
+  Codes:
+    200: 2125
+
+All virtual users finished
+Summary report @ 14:20:41(-0600) 2020-01-01
+  Scenarios launched:  7501
+  Scenarios completed: 7501
+  Requests completed:  7501
+  RPS sent: 521.26
+  Request latency:
+    min: 4.5
+    max: 106.1
+    median: 7.4
+    p95: 18.8
+    p99: 38.2
+  Scenario counts:
+    0: 7501 (100%)
+  Codes:
+    200: 7501
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:20:54(-0600) 2020-01-01
+Report @ 14:21:04(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  5216
+  Scenarios completed: 5209
+  Requests completed:  5209
+  RPS sent: 523.49
+  Request latency:
+    min: 4.5
+    max: 44.2
+    median: 7.1
+    p95: 20.9
+    p99: 36
+  Codes:
+    200: 5209
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12834)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:21:14(-0600) 2020-01-01
+Elapsed time: 20 seconds
+  Scenarios launched:  4784
+  Scenarios completed: 4791
+  Requests completed:  4791
+  RPS sent: 523.06
+  Request latency:
+    min: 4.3
+    max: 192.5
+    median: 7.7
+    p95: 27.6
+    p99: 142.1
+  Codes:
+    200: 4791
+
+All virtual users finished
+Summary report @ 14:21:14(-0600) 2020-01-01
+  Scenarios launched:  10000
+  Scenarios completed: 10000
+  Requests completed:  10000
+  RPS sent: 520.56
+  Request latency:
+    min: 4.3
+    max: 192.5
+    median: 7.4
+    p95: 23.8
+    p99: 57.7
+  Scenario counts:
+    0: 10000 (100%)
+  Codes:
+    200: 10000
+
+ ~/Documents/GitHub/product-description> 
+
+
+ ******** WITHOUT INDEXING ON NAME ********
+  ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:29:19(-0600) 2020-01-01
+Report @ 14:29:29(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  9
+  Scenarios completed: 0
+  Requests completed:  0
+  RPS sent: 1.01
+  Request latency:
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+
+Report @ 14:29:39(-0600) 2020-01-01
+Elapsed time: 21 seconds
+  Scenarios launched:  1
+  Scenarios completed: 5
+  Requests completed:  5
+  RPS sent: 0.1
+  Request latency:
+    min: 12620.4
+    max: 16577.8
+    median: 14623.2
+    p95: 16577.8
+    p99: 16577.8
+  Codes:
+    200: 5
+
+Report @ 14:29:48(-0600) 2020-01-01
+Elapsed time: 30 seconds
+  Scenarios launched:  0
+  Scenarios completed: 5
+  Requests completed:  5
+  RPS sent: NaN
+  Request latency:
+    min: 14541
+    max: 18777
+    median: 16540.2
+    p95: 18777
+    p99: 18777
+  Codes:
+    200: 5
+
+All virtual users finished
+Summary report @ 14:29:48(-0600) 2020-01-01
+  Scenarios launched:  10
+  Scenarios completed: 10
+  Requests completed:  10
+  RPS sent: 0.36
+  Request latency:
+    min: 12620.4
+    max: 18777
+    median: 15573.4
+    p95: 18777
+    p99: 18777
+  Scenario counts:
+    0: 10 (100%)
+  Codes:
+    200: 10
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/MongoGetByName.yaml
+Started phase 0, duration: 10s @ 14:30:09(-0600) 2020-01-01
+Report @ 14:30:19(-0600) 2020-01-01
+Elapsed time: 11 seconds
+  Scenarios launched:  99
+  Scenarios completed: 5
+  Requests completed:  5
+  RPS sent: 10.06
+  Request latency:
+    min: 7464
+    max: 7614
+    median: 7506.9
+    p95: 7614
+    p99: 7614
+  Codes:
+    200: 5
+
+Report @ 14:30:29(-0600) 2020-01-01
+Elapsed time: 21 seconds
+  Scenarios launched:  1
+  Scenarios completed: 5
+  Requests completed:  5
+  RPS sent: 0.1
+  Request latency:
+    min: 14036.1
+    max: 14559.2
+    median: 14285.1
+    p95: 14559.2
+    p99: 14559.2
+  Codes:
+    200: 5
+
+Report @ 14:30:39(-0600) 2020-01-01
+Elapsed time: 31 seconds
+  Scenarios launched:  0
+  Scenarios completed: 5
+  Requests completed:  5
+  RPS sent: NaN
+  Request latency:
+    min: 21544.6
+    max: 22069.4
+    median: 21799.4
+    p95: 22069.4
+    p99: 22069.4
+  Codes:
+    200: 5
+
+Report @ 14:30:49(-0600) 2020-01-01
+Elapsed time: 41 seconds
+  Scenarios launched:  0
+  Scenarios completed: 9
+  Requests completed:  9
+  RPS sent: NaN
+  Request latency:
+    min: 29973.1
+    max: 37050.2
+    median: 30509.9
+    p95: 37050.2
+    p99: 37050.2
+  Codes:
+    200: 9
+
+Report @ 14:30:59(-0600) 2020-01-01
+Elapsed time: 51 seconds
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 44184.7
+    max: 44953
+    median: 44656.5
+    p95: 44953
+    p99: 44953
+  Codes:
+    200: 4
+
+Report @ 14:31:09(-0600) 2020-01-01
+Elapsed time: 1 minute, 1 second
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 51653.3
+    max: 52409.2
+    median: 51920.4
+    p95: 52409.2
+    p99: 52409.2
+  Codes:
+    200: 4
+
+Report @ 14:31:19(-0600) 2020-01-01
+Elapsed time: 1 minute, 11 seconds
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 58183.5
+    max: 58861
+    median: 58498.5
+    p95: 58861
+    p99: 58861
+  Codes:
+    200: 4
+
+Report @ 14:31:29(-0600) 2020-01-01
+Elapsed time: 1 minute, 21 seconds
+  Scenarios launched:  0
+  Scenarios completed: 9
+  Requests completed:  9
+  RPS sent: NaN
+  Request latency:
+    min: 66366.3
+    max: 73929
+    median: 67041.2
+    p95: 73929
+    p99: 73929
+  Codes:
+    200: 9
+
+Report @ 14:31:39(-0600) 2020-01-01
+Elapsed time: 1 minute, 31 seconds
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 81601.2
+    max: 82228.1
+    median: 81964.4
+    p95: 82228.1
+    p99: 82228.1
+  Codes:
+    200: 4
+
+Report @ 14:31:49(-0600) 2020-01-01
+Elapsed time: 1 minute, 41 seconds
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 89033.1
+    max: 89823.5
+    median: 89660.6
+    p95: 89823.5
+    p99: 89823.5
+  Codes:
+    200: 4
+
+Report @ 14:31:59(-0600) 2020-01-01
+Elapsed time: 1 minute, 51 seconds
+  Scenarios launched:  0
+  Scenarios completed: 4
+  Requests completed:  4
+  RPS sent: NaN
+  Request latency:
+    min: 96304.8
+    max: 97060.1
+    median: 96850.1
+    p95: 97060.1
+    p99: 97060.1
+  Codes:
+    200: 4

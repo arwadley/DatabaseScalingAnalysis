@@ -21,7 +21,7 @@ let getItemById = function(currentId, callback) {
 };
 
 let getItemByName = function(itemName, callback) {
-  db.one("SELECT * FROM product_description WHERE itemName=$1", [itemName])
+  db.any("SELECT * FROM product_description WHERE productName=$1", [itemName])
     .then(data => {
       callback(null, data);
     })
@@ -31,7 +31,7 @@ let getItemByName = function(itemName, callback) {
 let insertItem = function(item, callback) {
   db.none(
     "INSERT INTO product_description(id, productName, productMaker, productDesc, productPrice, productRating, productNumOfRatings, productNumOfQuestionsAnswered, productCategory)" +
-      "VALUES($<item.id>, $<item.productName>, $<item.productMaker>, $<item.productDesc>, $<item.productPaa e>, $<item.productRating>, $<item.productNumOfRatings>, $<item.productNumOfQuestionsAnswered>, $<item.productCategory>)",
+      "VALUES($<item.id>, $<item.productName>, $<item.productMaker>, $<item.productDesc>, $<item.productPrice>, $<item.productRating>, $<item.productNumOfRatings>, $<item.productNumOfQuestionsAnswered>, $<item.productCategory>)",
     { item }
   )
     .then(data => {
@@ -65,9 +65,18 @@ let deleteItem = function(currentId, callback) {
     .catch(error => callback(error, null));
 };
 
+let pullitemNamesForTest = function(callback) {
+  db.any(
+    "SELECT productName from product_description WHERE id > 9000000 and id < 10000000"
+  )
+    .then(data => callback(null, data))
+    .catch(error => callback(error, null));
+};
+
 module.exports.db = db;
 module.exports.getItemById = getItemById;
 module.exports.insertItem = insertItem;
 module.exports.deleteItem = deleteItem;
 module.exports.updateItem = updateItem;
 module.exports.getItemByName = getItemByName;
+module.exports.pullitemNamesForTest = pullitemNamesForTest;
