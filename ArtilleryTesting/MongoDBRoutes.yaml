@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:7777"
+  http:
+    pool: 30
+  phases:
+    - duration: 8
+      arrivalRate: 1000
+  defaults:
+    headers:
+scenarios:
+  - flow:
+      - get:
+          url: "/itemIdMongo/?id={{$randomNumber(1, 10000000)}}"

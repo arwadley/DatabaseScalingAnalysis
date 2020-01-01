@@ -27,3 +27,6 @@ servercsvData18.csv
 servercsvData19.csv
 servercsvData20.csv
 csvbonus.csv
+newrelic/
+server/newrelic.js
+newrelic_agent.log

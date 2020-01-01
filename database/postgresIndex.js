@@ -20,10 +20,18 @@ let getItemById = function(currentId, callback) {
     .catch(error => callback(error, null));
 };
 
+let getItemByName = function(itemName, callback) {
+  db.one("SELECT * FROM product_description WHERE itemName=$1", [itemName])
+    .then(data => {
+      callback(null, data);
+    })
+    .catch(error => callback(error, null));
+};
+
 let insertItem = function(item, callback) {
   db.none(
     "INSERT INTO product_description(id, productName, productMaker, productDesc, productPrice, productRating, productNumOfRatings, productNumOfQuestionsAnswered, productCategory)" +
-      "VALUES($<item.id>, $<item.productName>, $<item.productMaker>, $<item.productDesc>, $<item.productPrice>, $<item.productRating>, $<item.productNumOfRatings>, $<item.productNumOfQuestionsAnswered>, $<item.productCategory>)",
+      "VALUES($<item.id>, $<item.productName>, $<item.productMaker>, $<item.productDesc>, $<item.productPaa e>, $<item.productRating>, $<item.productNumOfRatings>, $<item.productNumOfQuestionsAnswered>, $<item.productCategory>)",
     { item }
   )
     .then(data => {
@@ -62,3 +70,4 @@ module.exports.getItemById = getItemById;
 module.exports.insertItem = insertItem;
 module.exports.deleteItem = deleteItem;
 module.exports.updateItem = updateItem;
+module.exports.getItemByName = getItemByName;

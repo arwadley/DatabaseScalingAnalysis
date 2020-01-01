@@ -31,6 +31,12 @@ let getItemById = function(currentId, callback) {
   });
 };
 
+let getItemByName = function(itemName, callback) {
+  collection.findOne({ productName: itemName }, function(error, result) {
+    callback(error, result);
+  });
+};
+
 let deleteItemById = function(currentId, callback) {
   currentId = Number(currentId);
   collection.deleteOne({ id: currentId }, function(error, result) {
@@ -53,3 +59,4 @@ module.exports.addItem = addItem;
 module.exports.getItemById = getItemById;
 module.exports.deleteItemById = deleteItemById;
 module.exports.updateItemById = updateItemById;
+module.exports.getItemByName = getItemByName;

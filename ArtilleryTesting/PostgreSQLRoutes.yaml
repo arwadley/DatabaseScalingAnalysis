@@ -1,0 +1,11 @@
+config:
+  target: "http://localhost:7777"
+  phases:
+    - duration: 5
+      arrivalRate: 1000
+  defaults:
+    headers:
+scenarios:
+  - flow:
+      - get:
+          url: "/itemIdPG/?id={{$randomNumber(1, 10000000)}}"

@@ -1,3 +1,4 @@
+require("newrelic");
 const express = require("express");
 const path = require("path");
 let app = express();
@@ -27,7 +28,16 @@ app.get("/itemIdMongo", (req, res) => {
   });
 });
 
-app.get("/itemNameMongo", (req, res) => {});
+app.get("/itemNameMongo", (req, res) => {
+  let itemName = req.query.itemName;
+  mDB.getItemByName(itemName, function(error, result) {
+    if (error) {
+      res.status(404).send();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
 
 app.put("/itemMongo", (req, res) => {
   let updatedFields = req.body;
@@ -75,7 +85,16 @@ app.get("/itemIdPG", (req, res) => {
   });
 });
 
-app.get("/itenNamePG", (req, res) => {});
+app.get("/itenNamePG", (req, res) => {
+  let itemName = req.query.itemName;
+  dbPG.getItemByName(itemName, function(error, result) {
+    if (error) {
+      res.status(404).send();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
 
 app.put("/itemPG", (req, res) => {
   let updatedItem = req.body;
