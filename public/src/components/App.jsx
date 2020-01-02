@@ -1,5 +1,7 @@
 import React from "react";
 import Description from "./Description.jsx";
+import { isUndefined } from "util";
+import { KeyObject } from "crypto";
 const axios = require("axios");
 
 class App extends React.Component {
@@ -21,10 +23,31 @@ class App extends React.Component {
   }
 
   selectProductFromField(id) {
-    axios.get("/itemIdMongo", { params: { id: id } }).then(data => {
-      console.log(data.data);
+    axios.get("/itemIdPG", { params: { id: id } }).then(data => {
+      let obj = data.data;
+      for (var key in data.data) {
+        if (key === "productname") {
+          obj.productName = data.data.productname;
+        } else if (key === "productmaker") {
+          obj.productMaker = data.data.productmaker;
+        } else if (key === "productdesc") {
+          obj.productDesc = data.data.productdesc;
+        } else if (key === "productprice") {
+          obj.productPrice = data.data.productprice;
+        } else if (key === "productrating") {
+          obj.productRating = data.data.productRating;
+        } else if (key === "productnumofratings") {
+          obj.productNumOfRatings = data.data.productnumofratings;
+        } else if (key === "productnumofquestionsanswered") {
+          obj.productNumOfQuestionsAnswered =
+            data.data.productnumofquestionsanswered;
+        } else if (key === "productcategory") {
+          obj.productCategory = data.data.productcategory;
+        }
+      }
+      console.log(obj);
       this.setState({
-        currentProduct: data.data
+        currentProduct: obj
       });
     });
   }
