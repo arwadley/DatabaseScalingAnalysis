@@ -1,0 +1,285 @@
+ ===========================================
+ Pool: 100 in Postgres index
+ ===============================================
+ 
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 10s @ 11:18:33(-0600) 2020-01-02
+Report @ 11:18:43(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  5851
+  Scenarios completed: 5843
+  Requests completed:  5843
+  RPS sent: 586.66
+  Request latency:
+    min: 4.6
+    max: 57.4
+    median: 7.2
+    p95: 22.6
+    p99: 38.5
+  Codes:
+    200: 5843
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 4498)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:18:46(-0600) 2020-01-02
+Elapsed time: 13 seconds
+  Scenarios launched:  1650
+  Scenarios completed: 1658
+  Requests completed:  1658
+  RPS sent: 499.09
+  Request latency:
+    min: 4.5
+    max: 73.1
+    median: 7.8
+    p95: 31.8
+    p99: 63.1
+  Codes:
+    200: 1658
+
+All virtual users finished
+Summary report @ 11:18:46(-0600) 2020-01-02
+  Scenarios launched:  7501
+  Scenarios completed: 7501
+  Requests completed:  7501
+  RPS sent: 561.87
+  Request latency:
+    min: 4.5
+    max: 73.1
+    median: 7.3
+    p95: 25.7
+    p99: 43.7
+  Scenario counts:
+    0: 7501 (100%)
+  Codes:
+    200: 7501
+
+ ~/Documents/GitHub/product-description> 
+
+  ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 10s @ 11:24:32(-0600) 2020-01-02
+Report @ 11:24:42(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  5599
+  Scenarios completed: 5592
+  Requests completed:  5592
+  RPS sent: 561.38
+  Request latency:
+    min: 4.2
+    max: 81.4
+    median: 7.1
+    p95: 21.7
+    p99: 40.2
+  Codes:
+    200: 5592
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 4771)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:24:50(-0600) 2020-01-02
+Elapsed time: 18 seconds
+  Scenarios launched:  4401
+  Scenarios completed: 4408
+  Requests completed:  4408
+  RPS sent: 560.89
+  Request latency:
+    min: 4.1
+    max: 208.6
+    median: 7.3
+    p95: 26.7
+    p99: 60
+  Codes:
+    200: 4408
+
+All virtual users finished
+Summary report @ 11:24:50(-0600) 2020-01-02
+  Scenarios launched:  10000
+  Scenarios completed: 10000
+  Requests completed:  10000
+  RPS sent: 558.04
+  Request latency:
+    min: 4.1
+    max: 208.6
+    median: 7.2
+    p95: 23.8
+    p99: 47.3
+  Scenario counts:
+    0: 10000 (100%)
+  Codes:
+    200: 10000
+
+ ~/Documents/GitHub/product-description> 
+
+ =============================================
+ POOL IN ARTILLERY ArtilleryTesting
+ =============================================
+  ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 10s @ 11:21:49(-0600) 2020-01-02
+Report @ 11:21:59(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  999
+  Scenarios completed: 999
+  Requests completed:  999
+  RPS sent: 100.5
+  Request latency:
+    min: 1.4
+    max: 32.6
+    median: 2
+    p95: 3.4
+    p99: 15.2
+  Codes:
+    200: 999
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 4668)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:21:59(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  1
+  Scenarios completed: 1
+  Requests completed:  1
+  RPS sent: 2
+  Request latency:
+    min: 3.7
+    max: 3.7
+    median: 3.7
+    p95: 3.7
+    p99: 3.7
+  Codes:
+    200: 1
+
+All virtual users finished
+Summary report @ 11:21:59(-0600) 2020-01-02
+  Scenarios launched:  1000
+  Scenarios completed: 1000
+  Requests completed:  1000
+  RPS sent: 95.51
+  Request latency:
+    min: 1.4
+    max: 32.6
+    median: 2
+    p95: 3.4
+    p99: 15.1
+  Scenario counts:
+    0: 1000 (100%)
+  Codes:
+    200: 1000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 10s @ 11:22:15(-0600) 2020-01-02
+Report @ 11:22:25(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  8087
+  Scenarios completed: 8073
+  Requests completed:  8073
+  RPS sent: 810.12
+  Request latency:
+    min: 1.8
+    max: 87.2
+    median: 3.5
+    p95: 44.7
+    p99: 76.6
+  Codes:
+    200: 8073
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 4701)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:22:28(-0600) 2020-01-02
+Elapsed time: 12 seconds
+  Scenarios launched:  1913
+  Scenarios completed: 1927
+  Requests completed:  1927
+  RPS sent: 730.92
+  Request latency:
+    min: 1.8
+    max: 86.5
+    median: 3
+    p95: 24.1
+    p99: 41.3
+  Codes:
+    200: 1927
+
+All virtual users finished
+Summary report @ 11:22:28(-0600) 2020-01-02
+  Scenarios launched:  10000
+  Scenarios completed: 10000
+  Requests completed:  10000
+  RPS sent: 788.02
+  Request latency:
+    min: 1.8
+    max: 87.2
+    median: 3.4
+    p95: 39.9
+    p99: 76.2
+  Scenario counts:
+    0: 10000 (100%)
+  Codes:
+    200: 10000
+
+
+
+*******POOL: 100
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 10s @ 11:22:41(-0600) 2020-01-02
+Report @ 11:22:51(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  8635
+  Scenarios completed: 8630
+  Requests completed:  8630
+  RPS sent: 865.03
+  Request latency:
+    min: 1.8
+    max: 63.8
+    median: 3.5
+    p95: 22
+    p99: 38.3
+  Codes:
+    200: 8630
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 4729)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 11:22:53(-0600) 2020-01-02
+Elapsed time: 12 seconds
+  Scenarios launched:  1365
+  Scenarios completed: 1370
+  Requests completed:  1370
+  RPS sent: 719.47
+  Request latency:
+    min: 1.5
+    max: 78.4
+    median: 2.8
+    p95: 26.9
+    p99: 47.9
+  Codes:
+    200: 1370
+
+All virtual users finished
+Summary report @ 11:22:53(-0600) 2020-01-02
+  Scenarios launched:  10000
+  Scenarios completed: 10000
+  Requests completed:  10000
+  RPS sent: 835.42
+  Request latency:
+    min: 1.5
+    max: 78.4
+    median: 3.4
+    p95: 22.7
+    p99: 40.3
+  Scenario counts:
+    0: 10000 (100%)
+  Codes:
+    200: 10000
+
+ ~/Documents/GitHub/product-description> 

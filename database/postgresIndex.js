@@ -2,15 +2,17 @@ const pgp = require("pg-promise")({
   capSQL: true
 });
 
+pgp.pg.defaults.poolSize = 100;
+
 const postgresPassword = require("../config.js");
 
 let db = pgp(
   `postgres://postgres:${postgresPassword}@localhost:5432/gamazonproducts`
 );
 
-db.connect()
-  .then(console.log("pgPromise connected"))
-  .catch(error => console.log(error));
+// db.connect()
+//   .then(console.log("pgPromise connected"))
+//   .catch(error => console.log(error));
 
 let getItemById = function(currentId, callback) {
   db.one("SELECT * FROM product_description WHERE id=$1", [currentId])

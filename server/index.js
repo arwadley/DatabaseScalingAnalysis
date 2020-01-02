@@ -56,7 +56,6 @@ app.post("/itemMongo", (req, res) => {
   let product = req.body;
   mDB.addItem(product, function(error, result) {
     if (error) {
-      console.log(error);
       res.status(400).end();
     } else {
       res.status(200).send(result);
@@ -110,7 +109,6 @@ app.put("/itemPG", (req, res) => {
 
 app.post("/itemPG", (req, res) => {
   let product = req.body;
-  console.log(product);
   dbPG.insertItem(product, function(error, result) {
     if (error) {
       console.log(error);

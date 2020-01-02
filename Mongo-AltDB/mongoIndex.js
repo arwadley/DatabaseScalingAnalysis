@@ -9,14 +9,14 @@ const client = new MongoClient(url);
 let db;
 let collection;
 
-client.connect(function(error, client) {
-  if (error) {
-    console.log(error);
-  } else {
-    db = client.db(dbName);
-    collection = db.collection("product_description");
-  }
-});
+// client.connect(function(error, client) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     db = client.db(dbName);
+//     collection = db.collection("product_description");
+//   }
+// });
 
 let addItem = function(item, callback) {
   collection.insertOne(item, function(error, result) {
