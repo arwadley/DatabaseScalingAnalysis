@@ -3,7 +3,7 @@ config:
   http:
     pool: 100
   phases:
-    - duration: 10
+    - duration: 60
       arrivalRate: 1000
   defaults:
     headers:

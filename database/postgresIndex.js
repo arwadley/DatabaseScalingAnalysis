@@ -2,12 +2,12 @@ const pgp = require("pg-promise")({
   capSQL: true
 });
 
-pgp.pg.defaults.poolSize = 100;
+pgp.pg.defaults.poolSize = 1000;
 
 const postgresPassword = require("../config.js");
 
 let db = pgp(
-  `postgres://postgres:${postgresPassword}@localhost:5432/gamazonproducts`
+  `postgres://postgres@ec2-18-191-194-226.us-east-2.compute.amazonaws.com:5432/gamazonproducts`
 );
 
 // db.connect()

@@ -14,3 +14,4 @@ CREATE TABLE product_description(
   productNumOfQuestionsAnswered INT,
   productCategory VARCHAR(100)
 );
+

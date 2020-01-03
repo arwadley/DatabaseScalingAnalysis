@@ -283,3 +283,985 @@ Summary report @ 11:22:53(-0600) 2020-01-02
     200: 10000
 
  ~/Documents/GitHub/product-description> 
+
+ ============================================
+ Increased Pool Size and Removed Mongo
+ ============================================
+  ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:21:29(-0600) 2020-01-02
+Report @ 14:21:39(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  7820
+  Scenarios completed: 7815
+  Requests completed:  7815
+  RPS sent: 784.15
+  Request latency:
+    min: 1.9
+    max: 250
+    median: 3.8
+    p95: 208.2
+    p99: 227.8
+  Codes:
+    200: 7815
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1606)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:21:49(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9127
+  Scenarios completed: 9127
+  Requests completed:  9127
+  RPS sent: 916.37
+  Request latency:
+    min: 1.8
+    max: 72.6
+    median: 3.1
+    p95: 15.3
+    p99: 25.3
+  Codes:
+    200: 9127
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:21:59(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9139
+  Scenarios completed: 9139
+  Requests completed:  9139
+  RPS sent: 916.65
+  Request latency:
+    min: 1.9
+    max: 63.8
+    median: 3.1
+    p95: 18.4
+    p99: 30.2
+  Codes:
+    200: 9139
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:09(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  8968
+  Scenarios completed: 8968
+  Requests completed:  8968
+  RPS sent: 899.5
+  Request latency:
+    min: 1.7
+    max: 81.2
+    median: 3.1
+    p95: 27.8
+    p99: 50.8
+  Codes:
+    200: 8968
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:19(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9308
+  Scenarios completed: 9308
+  Requests completed:  9308
+  RPS sent: 932.67
+  Request latency:
+    min: 1.6
+    max: 60.1
+    median: 3
+    p95: 17.9
+    p99: 32.4
+  Codes:
+    200: 9308
+
+Report @ 14:22:29(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9389
+  Scenarios completed: 9389
+  Requests completed:  9389
+  RPS sent: 941.73
+  Request latency:
+    min: 1.8
+    max: 67.8
+    median: 3
+    p95: 15.3
+    p99: 31.6
+  Codes:
+    200: 9389
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:36(-0600) 2020-01-02
+Elapsed time: 1 minute, 7 seconds
+  Scenarios launched:  6249
+  Scenarios completed: 6254
+  Requests completed:  6254
+  RPS sent: 877.95
+  Request latency:
+    min: 1.6
+    max: 64.6
+    median: 2.9
+    p95: 16
+    p99: 35.4
+  Codes:
+    200: 6254
+
+All virtual users finished
+Summary report @ 14:22:36(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 890.21
+  Request latency:
+    min: 1.6
+    max: 250
+    median: 3.1
+    p95: 24.8
+    p99: 186
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:24:05(-0600) 2020-01-02
+Report @ 14:24:15(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  7957
+  Scenarios completed: 7952
+  Requests completed:  7952
+  RPS sent: 797.89
+  Request latency:
+    min: 1.7
+    max: 192.7
+    median: 3.7
+    p95: 121.9
+    p99: 145.7
+  Codes:
+    200: 7952
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1708)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:25(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9399
+  Scenarios completed: 9399
+  Requests completed:  9399
+  RPS sent: 943.67
+  Request latency:
+    min: 1.6
+    max: 73.2
+    median: 2.9
+    p95: 20.3
+    p99: 36.6
+  Codes:
+    200: 9399
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:35(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9501
+  Scenarios completed: 9501
+  Requests completed:  9501
+  RPS sent: 952.96
+  Request latency:
+    min: 1.6
+    max: 67.4
+    median: 2.9
+    p95: 19.5
+    p99: 37.9
+  Codes:
+    200: 9501
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:45(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  9636
+  Scenarios completed: 9636
+  Requests completed:  9636
+  RPS sent: 966.5
+  Request latency:
+    min: 1.8
+    max: 63
+    median: 2.9
+    p95: 19.2
+    p99: 35.1
+  Codes:
+    200: 9636
+
+Report @ 14:24:55(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9695
+  Scenarios completed: 9695
+  Requests completed:  9695
+  RPS sent: 972.42
+  Request latency:
+    min: 1.8
+    max: 65.6
+    median: 2.9
+    p95: 15.7
+    p99: 34.4
+  Codes:
+    200: 9695
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:25:05(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9571
+  Scenarios completed: 9571
+  Requests completed:  9571
+  RPS sent: 959.98
+  Request latency:
+    min: 1.8
+    max: 66.3
+    median: 2.9
+    p95: 22.1
+    p99: 35.6
+  Codes:
+    200: 9571
+
+Report @ 14:25:10(-0600) 2020-01-02
+Elapsed time: 1 minute, 5 seconds
+  Scenarios launched:  4241
+  Scenarios completed: 4246
+  Requests completed:  4246
+  RPS sent: 867.69
+  Request latency:
+    min: 1.8
+    max: 64.2
+    median: 2.9
+    p95: 11.6
+    p99: 31.2
+  Codes:
+    200: 4246
+
+All virtual users finished
+Summary report @ 14:25:10(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 920.81
+  Request latency:
+    min: 1.6
+    max: 192.7
+    median: 2.9
+    p95: 24.2
+    p99: 77.3
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:25:26(-0600) 2020-01-02
+Report @ 14:25:36(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  8063
+  Scenarios completed: 8058
+  Requests completed:  8058
+  RPS sent: 807.72
+  Request latency:
+    min: 1.7
+    max: 247.2
+    median: 3.5
+    p95: 191
+    p99: 222.1
+  Codes:
+    200: 8058
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1771)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:25:46(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9542
+  Scenarios completed: 9543
+  Requests completed:  9543
+  RPS sent: 958.03
+  Request latency:
+    min: 1.7
+    max: 76.2
+    median: 2.9
+    p95: 24.4
+    p99: 38.1
+  Codes:
+    200: 9543
+
+Report @ 14:25:56(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9676
+  Scenarios completed: 9676
+  Requests completed:  9676
+  RPS sent: 970.51
+  Request latency:
+    min: 1.8
+    max: 65.2
+    median: 2.8
+    p95: 13.2
+    p99: 29.9
+  Codes:
+    200: 9676
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:06(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  9600
+  Scenarios completed: 9599
+  Requests completed:  9599
+  RPS sent: 963.86
+  Request latency:
+    min: 1.8
+    max: 67.2
+    median: 2.9
+    p95: 22.4
+    p99: 44.4
+  Codes:
+    200: 9599
+
+Report @ 14:26:16(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9729
+  Scenarios completed: 9729
+  Requests completed:  9729
+  RPS sent: 975.83
+  Request latency:
+    min: 1.8
+    max: 64.5
+    median: 2.8
+    p95: 20.3
+    p99: 36.4
+  Codes:
+    200: 9729
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:26(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9794
+  Scenarios completed: 9794
+  Requests completed:  9794
+  RPS sent: 982.35
+  Request latency:
+    min: 1.8
+    max: 64.5
+    median: 2.8
+    p95: 15.5
+    p99: 32
+  Codes:
+    200: 9794
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:30(-0600) 2020-01-02
+Elapsed time: 1 minute, 4 seconds
+  Scenarios launched:  3596
+  Scenarios completed: 3601
+  Requests completed:  3601
+  RPS sent: 840.65
+  Request latency:
+    min: 1.3
+    max: 108.7
+    median: 2.8
+    p95: 49.8
+    p99: 76.1
+  Codes:
+    200: 3601
+
+All virtual users finished
+Summary report @ 14:26:30(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 929.51
+  Request latency:
+    min: 1.3
+    max: 247.2
+    median: 2.9
+    p95: 27
+    p99: 150.1
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> 
+  ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:21:29(-0600) 2020-01-02
+Report @ 14:21:39(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  7820
+  Scenarios completed: 7815
+  Requests completed:  7815
+  RPS sent: 784.15
+  Request latency:
+    min: 1.9
+    max: 250
+    median: 3.8
+    p95: 208.2
+    p99: 227.8
+  Codes:
+    200: 7815
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1606)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:21:49(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9127
+  Scenarios completed: 9127
+  Requests completed:  9127
+  RPS sent: 916.37
+  Request latency:
+    min: 1.8
+    max: 72.6
+    median: 3.1
+    p95: 15.3
+    p99: 25.3
+  Codes:
+    200: 9127
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:21:59(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9139
+  Scenarios completed: 9139
+  Requests completed:  9139
+  RPS sent: 916.65
+  Request latency:
+    min: 1.9
+    max: 63.8
+    median: 3.1
+    p95: 18.4
+    p99: 30.2
+  Codes:
+    200: 9139
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:09(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  8968
+  Scenarios completed: 8968
+  Requests completed:  8968
+  RPS sent: 899.5
+  Request latency:
+    min: 1.7
+    max: 81.2
+    median: 3.1
+    p95: 27.8
+    p99: 50.8
+  Codes:
+    200: 8968
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:19(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9308
+  Scenarios completed: 9308
+  Requests completed:  9308
+  RPS sent: 932.67
+  Request latency:
+    min: 1.6
+    max: 60.1
+    median: 3
+    p95: 17.9
+    p99: 32.4
+  Codes:
+    200: 9308
+
+Report @ 14:22:29(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9389
+  Scenarios completed: 9389
+  Requests completed:  9389
+  RPS sent: 941.73
+  Request latency:
+    min: 1.8
+    max: 67.8
+    median: 3
+    p95: 15.3
+    p99: 31.6
+  Codes:
+    200: 9389
+
+Warning: High CPU usage warning (pids: 1606).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:22:36(-0600) 2020-01-02
+Elapsed time: 1 minute, 7 seconds
+  Scenarios launched:  6249
+  Scenarios completed: 6254
+  Requests completed:  6254
+  RPS sent: 877.95
+  Request latency:
+    min: 1.6
+    max: 64.6
+    median: 2.9
+    p95: 16
+    p99: 35.4
+  Codes:
+    200: 6254
+
+All virtual users finished
+Summary report @ 14:22:36(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 890.21
+  Request latency:
+    min: 1.6
+    max: 250
+    median: 3.1
+    p95: 24.8
+    p99: 186
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:24:05(-0600) 2020-01-02
+Report @ 14:24:15(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  7957
+  Scenarios completed: 7952
+  Requests completed:  7952
+  RPS sent: 797.89
+  Request latency:
+    min: 1.7
+    max: 192.7
+    median: 3.7
+    p95: 121.9
+    p99: 145.7
+  Codes:
+    200: 7952
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1708)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:25(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9399
+  Scenarios completed: 9399
+  Requests completed:  9399
+  RPS sent: 943.67
+  Request latency:
+    min: 1.6
+    max: 73.2
+    median: 2.9
+    p95: 20.3
+    p99: 36.6
+  Codes:
+    200: 9399
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:35(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9501
+  Scenarios completed: 9501
+  Requests completed:  9501
+  RPS sent: 952.96
+  Request latency:
+    min: 1.6
+    max: 67.4
+    median: 2.9
+    p95: 19.5
+    p99: 37.9
+  Codes:
+    200: 9501
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:24:45(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  9636
+  Scenarios completed: 9636
+  Requests completed:  9636
+  RPS sent: 966.5
+  Request latency:
+    min: 1.8
+    max: 63
+    median: 2.9
+    p95: 19.2
+    p99: 35.1
+  Codes:
+    200: 9636
+
+Report @ 14:24:55(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9695
+  Scenarios completed: 9695
+  Requests completed:  9695
+  RPS sent: 972.42
+  Request latency:
+    min: 1.8
+    max: 65.6
+    median: 2.9
+    p95: 15.7
+    p99: 34.4
+  Codes:
+    200: 9695
+
+Warning: High CPU usage warning (pids: 1708).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:25:05(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9571
+  Scenarios completed: 9571
+  Requests completed:  9571
+  RPS sent: 959.98
+  Request latency:
+    min: 1.8
+    max: 66.3
+    median: 2.9
+    p95: 22.1
+    p99: 35.6
+  Codes:
+    200: 9571
+
+Report @ 14:25:10(-0600) 2020-01-02
+Elapsed time: 1 minute, 5 seconds
+  Scenarios launched:  4241
+  Scenarios completed: 4246
+  Requests completed:  4246
+  RPS sent: 867.69
+  Request latency:
+    min: 1.8
+    max: 64.2
+    median: 2.9
+    p95: 11.6
+    p99: 31.2
+  Codes:
+    200: 4246
+
+All virtual users finished
+Summary report @ 14:25:10(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 920.81
+  Request latency:
+    min: 1.6
+    max: 192.7
+    median: 2.9
+    p95: 24.2
+    p99: 77.3
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+======================================================
+1000 Pools
+======================================================
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:25:26(-0600) 2020-01-02
+Report @ 14:25:36(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  8063
+  Scenarios completed: 8058
+  Requests completed:  8058
+  RPS sent: 807.72
+  Request latency:
+    min: 1.7
+    max: 247.2
+    median: 3.5
+    p95: 191
+    p99: 222.1
+  Codes:
+    200: 8058
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1771)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:25:46(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9542
+  Scenarios completed: 9543
+  Requests completed:  9543
+  RPS sent: 958.03
+  Request latency:
+    min: 1.7
+    max: 76.2
+    median: 2.9
+    p95: 24.4
+    p99: 38.1
+  Codes:
+    200: 9543
+
+Report @ 14:25:56(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  9676
+  Scenarios completed: 9676
+  Requests completed:  9676
+  RPS sent: 970.51
+  Request latency:
+    min: 1.8
+    max: 65.2
+    median: 2.8
+    p95: 13.2
+    p99: 29.9
+  Codes:
+    200: 9676
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:06(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  9600
+  Scenarios completed: 9599
+  Requests completed:  9599
+  RPS sent: 963.86
+  Request latency:
+    min: 1.8
+    max: 67.2
+    median: 2.9
+    p95: 22.4
+    p99: 44.4
+  Codes:
+    200: 9599
+
+Report @ 14:26:16(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  9729
+  Scenarios completed: 9729
+  Requests completed:  9729
+  RPS sent: 975.83
+  Request latency:
+    min: 1.8
+    max: 64.5
+    median: 2.8
+    p95: 20.3
+    p99: 36.4
+  Codes:
+    200: 9729
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:26(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  9794
+  Scenarios completed: 9794
+  Requests completed:  9794
+  RPS sent: 982.35
+  Request latency:
+    min: 1.8
+    max: 64.5
+    median: 2.8
+    p95: 15.5
+    p99: 32
+  Codes:
+    200: 9794
+
+Warning: High CPU usage warning (pids: 1771).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:26:30(-0600) 2020-01-02
+Elapsed time: 1 minute, 4 seconds
+  Scenarios launched:  3596
+  Scenarios completed: 3601
+  Requests completed:  3601
+  RPS sent: 840.65
+  Request latency:
+    min: 1.3
+    max: 108.7
+    median: 2.8
+    p95: 49.8
+    p99: 76.1
+  Codes:
+    200: 3601
+
+All virtual users finished
+Summary report @ 14:26:30(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 929.51
+  Request latency:
+    min: 1.3
+    max: 247.2
+    median: 2.9
+    p95: 27
+    p99: 150.1
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> artillery run ArtilleryTesting/PostgreSQLGet.yaml
+Started phase 0, duration: 60s @ 14:34:55(-0600) 2020-01-02
+Report @ 14:35:05(-0600) 2020-01-02
+Elapsed time: 10 seconds
+  Scenarios launched:  8404
+  Scenarios completed: 8399
+  Requests completed:  8399
+  RPS sent: 841.88
+  Request latency:
+    min: 1.6
+    max: 278
+    median: 3.9
+    p95: 241.9
+    p99: 259.5
+  Codes:
+    200: 8399
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 1894)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:35:15(-0600) 2020-01-02
+Elapsed time: 20 seconds
+  Scenarios launched:  9989
+  Scenarios completed: 9989
+  Requests completed:  9989
+  RPS sent: 1002.91
+  Request latency:
+    min: 1.7
+    max: 78.5
+    median: 2.8
+    p95: 20.7
+    p99: 30.3
+  Codes:
+    200: 9989
+
+Report @ 14:35:25(-0600) 2020-01-02
+Elapsed time: 30 seconds
+  Scenarios launched:  10062
+  Scenarios completed: 10062
+  Requests completed:  10062
+  RPS sent: 1010.24
+  Request latency:
+    min: 1.7
+    max: 70.4
+    median: 2.8
+    p95: 20
+    p99: 29.9
+  Codes:
+    200: 10062
+
+Warning: High CPU usage warning (pids: 1894).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:35:35(-0600) 2020-01-02
+Elapsed time: 40 seconds
+  Scenarios launched:  10001
+  Scenarios completed: 10001
+  Requests completed:  10001
+  RPS sent: 1004.12
+  Request latency:
+    min: 1.7
+    max: 68.9
+    median: 2.8
+    p95: 20.5
+    p99: 29.7
+  Codes:
+    200: 10001
+
+Warning: High CPU usage warning (pids: 1894).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:35:45(-0600) 2020-01-02
+Elapsed time: 50 seconds
+  Scenarios launched:  10220
+  Scenarios completed: 10220
+  Requests completed:  10220
+  RPS sent: 1025.08
+  Request latency:
+    min: 1.7
+    max: 65.4
+    median: 2.7
+    p95: 21.5
+    p99: 39.7
+  Codes:
+    200: 10220
+
+Report @ 14:35:55(-0600) 2020-01-02
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  10217
+  Scenarios completed: 10217
+  Requests completed:  10217
+  RPS sent: 1025.8
+  Request latency:
+    min: 1.7
+    max: 69.4
+    median: 2.7
+    p95: 18.1
+    p99: 31.3
+  Codes:
+    200: 10217
+
+Warning: High CPU usage warning (pids: 1894).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 14:35:56(-0600) 2020-01-02
+Elapsed time: 1 minute, 1 second
+  Scenarios launched:  1107
+  Scenarios completed: 1112
+  Requests completed:  1112
+  RPS sent: 697.48
+  Request latency:
+    min: 1.7
+    max: 69.6
+    median: 2.7
+    p95: 15.6
+    p99: 28.1
+  Codes:
+    200: 1112
+
+All virtual users finished
+Summary report @ 14:35:56(-0600) 2020-01-02
+  Scenarios launched:  60000
+  Scenarios completed: 60000
+  Requests completed:  60000
+  RPS sent: 970.09
+  Request latency:
+    min: 1.6
+    max: 278
+    median: 2.8
+    p95: 26.4
+    p99: 232.4
+  Scenario counts:
+    0: 60000 (100%)
+  Codes:
+    200: 60000
+
+ ~/Documents/GitHub/product-description> 
