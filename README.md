@@ -14,7 +14,7 @@
 
 # Results:
 ### 1.) BaseLine Testing results from Morgan logging middleware:
-#### Mongo and PostgreSQL had very similar results for the GET routes, but Mongo was significantly faster on PUT, POST, and DELETE routes. It appeared data look-up was equivalent between the two, but Mongo was faster on data manipulation of already existing data. I suspect this is because of its document structure, rather than having to modify a table structure. ,
+#### Mongo and PostgreSQL had very similar results for the GET routes, but Mongo was significantly faster on PUT, POST, and DELETE routes. It appeared data look-up was equivalent between the two, but Mongo was faster on data manipulation of already existing data. I suspect this is because of its document structure, rather than having to modify a table structure.
 ### 2.) The Importance of Indexing: 
 #### It is well known that indexing a column or field will produce faster query times. However, I wanted to see if I could quantify that benefit. It ended up being more significant than I anticipated. 
 #### In the artillery testing with the Mongo database, I tested a query on item name before and after indexing that field. 
