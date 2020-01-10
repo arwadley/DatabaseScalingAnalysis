@@ -7,10 +7,10 @@
 ### 3.) Stress test and optimize GET and POST routes for high traffic. 
 
 # Process:
-### I wrote a script to create 10 million randomly generated items fitting the required data structure and write them to CSV files using the Node JS file system. 
-### This pre-made data allowed me to populate a PostgreSQL and MongoDB datases with the same data set for accurate comparison.
-### Used Morgan logging middleware to compile baseline average response times for GET, PUT, POST, and DELETE routes for a single query on both databses.
-### Utilized Artillery to stress test and compile latency and RPS data on GET and POST routes throughout optimization process. 
+#### I wrote a script to create 10 million randomly generated items fitting the required data structure and write them to CSV files using the Node JS file system. 
+#### This pre-made data allowed me to populate a PostgreSQL and MongoDB datases with the same data set for accurate comparison.
+#### Used Morgan logging middleware to compile baseline average response times for GET, PUT, POST, and DELETE routes for a single query on both databses.
+#### Utilized Artillery to stress test and compile latency and RPS data on GET and POST routes throughout optimization process. 
 
 # Results:
 ### 1.) BaseLine Testing results from Morgan logging middleware:
